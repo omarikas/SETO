@@ -9,11 +9,11 @@
         .balloon {
             width: 50px;
             height: 70px;
-            background-color: red;
             border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
             position: absolute;
             bottom: -100px;
             animation: float 6s ease-in-out infinite;
+            scale: 2;
         }
 
         .balloon::before {
@@ -23,7 +23,6 @@
             left: 50%;
             width: 2px;
             height: 20px;
-            background-color: red;
         }
 
         @keyframes float {
@@ -46,11 +45,11 @@
     </div>
 
     <h1 class="rotating-text">كل سنه و انتم طيبين <br> من عمر</h1>
-
-    <div class="balloon" style="left: 20%; background-color: red;"></div>
-    <div class="balloon" style="left: 40%; background-color: blue;"></div>
-    <div class="balloon" style="left: 60%; background-color: green;"></div>
-    <div class="balloon" style="left: 80%; background-color: yellow;"></div>
+    <img   id="i2025" src="./2025.gif"/>
+    <img  src="./balloon.png" class="balloon" style="left: 20%; "></img>
+    <img src="./balloon.png" class="balloon" style="left: 40%;"></img>
+    <img src="./balloon.png"class="balloon" style="left: 60%;"></img>
+    <img src="./balloon.png" class="balloon" style="left: 80%;"></img>
 
     <script src="index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
@@ -82,8 +81,8 @@
                 }
             }());
 
-            var audio = new Audio('https://www.soundjay.com/button/sounds/button-16.mp3');
-            audio.play();
+            var audio2 = new Audio('./song.mp3');
+            audio2.play();
         });
     </script>
 </body>

@@ -4,6 +4,14 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+#i2025{
+
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
 @keyframes jump {
     0%, 100% {
         transform: translate(-50%, -50%);
