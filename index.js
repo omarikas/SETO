@@ -4,5 +4,8 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelector('.rotating-text').style.display="block"
 
         document.querySelector('#i2025').style.display="block"
+        document.querySelectorAll(".balloon").forEach((elem)=>{
+            elem.style.display="block"
+        })
     });
 });
