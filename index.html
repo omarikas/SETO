@@ -5,19 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
+    <style>
+        .balloon {
+            width: 50px;
+            height: 70px;
+            background-color: red;
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            position: absolute;
+            bottom: -100px;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .balloon::before {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            width: 2px;
+            height: 20px;
+            background-color: red;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-300px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="center">
         <img src="./gift.png" />
-        <p>المس الهديه</p>
+        <h1>المس الهديه</h1>
     </div>
 
-    <h1 class="rotating-text">كل سنه و انتي طيبه من عمر</h1>
+    <h1 class="rotating-text">كل سنه و انتم طيبين <br> من عمر</h1>
+
+    <div class="balloon" style="left: 20%; background-color: red;"></div>
+    <div class="balloon" style="left: 40%; background-color: blue;"></div>
+    <div class="balloon" style="left: 60%; background-color: green;"></div>
+    <div class="balloon" style="left: 80%; background-color: yellow;"></div>
+
     <script src="index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
     <script>
         document.querySelector('.center img').addEventListener('click', function() {
-            var duration = 5 * 1000;
+            var duration = 5 * 10000;
             var end = Date.now() + duration;
 
             function randomInRange(min, max) {
